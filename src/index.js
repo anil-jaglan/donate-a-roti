@@ -1,13 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import { createBrowserHistory } from "history";
+import { Router } from "react-router-dom";
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+import "assets/scss/material-kit-react.scss?v=1.8.0";
+
+// pages
+import App from "./App.js";
+
+var hist = createBrowserHistory();
+
+ReactDOM.render(  
+    <Router history={hist}>
+      <App/>
+    </Router>,  
   document.getElementById('root')
 );
 

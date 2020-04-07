@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Donate A Roti - is an initiave to help feeding poor by collecting food items from door steps.
 
 ## Available Scripts
 
