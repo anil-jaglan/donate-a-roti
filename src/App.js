@@ -17,6 +17,7 @@ import OAuth2RedirectHandler from './user/oauth2/OAuth2RedirectHandler';
 import { getCurrentUser } from './utils/APIUtils';
 import { ACCESS_TOKEN } from './constants';
 import ProtectedRoute from './common/ProtectedRoute';
+import LoadingIndicator from './common/LoadingIndicator';
 
 import 'react-s-alert/dist/s-alert-default.css';
 import 'react-s-alert/dist/s-alert-css-effects/slide.css';
@@ -69,6 +70,9 @@ class App extends React.Component {
     }
 
     render() {
+        if(this.state.loading) {            
+            return <LoadingIndicator />;
+        }
         return (
             <div className="App">
                 <div className="Almighty-Router">

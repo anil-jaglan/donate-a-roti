@@ -5,7 +5,7 @@ import { Route, Redirect } from "react-router-dom";
 const ProtectedRoute = ({ component: Component, authenticated, ...rest }) => (
     <Route
       {...rest}
-      render={props =>
+      render={props =>        
         authenticated ? (
           <Component {...rest} {...props} />
         ) : (

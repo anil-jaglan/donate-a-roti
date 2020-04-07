@@ -30,7 +30,7 @@ class ProfilePage extends React.Component {
                             </GridContainer>
                         </GridItem>
                         <GridItem xs={12} sm={12} md={4}>
-
+                            {this.props.currentUser.name}
                         </GridItem>
                     </GridContainer>
                 </div>
