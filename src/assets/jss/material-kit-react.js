@@ -132,6 +132,38 @@ const roseCardHeader = {
   background: "linear-gradient(60deg, #ec407a, #d81b60)",
   ...roseBoxShadow
 };
+const iconCardHeader = { 
+};
+const warningCardIcon = {
+  color: "#fff",
+  background: "linear-gradient(60deg, #ffa726, #fb8c00)",
+  ...warningBoxShadow
+};
+const successCardIcon = {
+  color: "#fff",
+  background: "linear-gradient(60deg, #66bb6a, #43a047)",
+  ...successBoxShadow
+};
+const dangerCardIcon = {
+  color: "#fff",
+  background: "linear-gradient(60deg, #ef5350, #e53935)",
+  ...dangerBoxShadow
+};
+const infoCardIcon = {
+  color: "#fff",
+  background: "linear-gradient(60deg, #26c6da, #00acc1)",
+  ...infoBoxShadow
+};
+const primaryCardIcon = {
+  color: "#fff",
+  background: "linear-gradient(60deg, #ab47bc, #8e24aa)",
+  ...primaryBoxShadow
+};
+const roseCardIcon = {
+  color: "#fff",
+  background: "linear-gradient(60deg, #ec407a, #d81b60)",
+  ...roseBoxShadow
+};
 const cardActions = {
   margin: "0 20px 10px",
   paddingTop: "10px",
@@ -207,6 +239,13 @@ export {
   infoCardHeader,
   primaryCardHeader,
   roseCardHeader,
+  iconCardHeader,
+  warningCardIcon,
+  successCardIcon,
+  dangerCardIcon,
+  infoCardIcon,
+  primaryCardIcon,
+  roseCardIcon,
   cardActions,
   cardHeader,
   defaultBoxShadow,

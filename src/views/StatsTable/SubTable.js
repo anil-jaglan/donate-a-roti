@@ -1,37 +1,13 @@
 import React, { useState, useEffect } from 'react';
-
 import axios from 'axios';
 
-import CircularProgress from '@material-ui/core/CircularProgress';
 import ArrowDownward from '@material-ui/icons/ArrowDownward';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 // core components
 import DataTable from 'react-data-table-component';
 
-import SubTable from "./SubTable.js";
 
-const columns = [
-    {
-        name: 'State',
-        selector: 'state',
-        sortable: true,
-    },
-    {
-        name: 'Total Rotis Donated',
-        selector: 'donated',
-        sortable: true,
-    },
-    {
-        name: 'Active Doners',
-        selector: 'doners',
-        sortable: true,
-    },
-    {
-        name: 'People Feeded',
-        selector: 'donees',
-        sortable: true,
-    },
-];
 const customStyles = {    
     headCells: {
         style: {
@@ -52,8 +28,29 @@ const Circular = () => (
         <CircularProgress size={75} />
     </div>
 );
-
-export default function StatsTable(props) {
+const columns = [
+    {
+        name: 'City',
+        selector: 'city',
+        sortable: true,
+    },
+    {
+        name: 'Total Rotis Donated',
+        selector: 'donated',
+        sortable: true,
+    },
+    {
+        name: 'Active Doners',
+        selector: 'doners',
+        sortable: true,
+    },
+    {
+        name: 'People Feeded',
+        selector: 'donees',
+        sortable: true,
+    },
+];
+export default function SubTable(props) {
 
     const [data, setData] = useState([]);
     const [fetched, setFetched] = useState(false);
@@ -67,26 +64,25 @@ export default function StatsTable(props) {
     const getData = async () => {
         try {
             const [response] = await Promise.all([
-                axios.get('http://www.mocky.io/v2/5e85f477300000ca1497b6c5'),
+                axios.get('http://www.mocky.io/v2/5e919e233300009200e9cf81'),
             ]);
             setData(response.data.data);
+            console.log(response.data.data);
             setFetched(true);
         } catch (err) {
             console.log(err);
         }
     };
+    
     return (
         <DataTable
             sortIcon={sortIcon}
-            title="Donation By States"
-            columns={columns}
+            column={columns}
             data={data}
+            customStyles={customStyles}
+            highlightOnHover
+            pointerOnHover
             progressPending={!fetched}
             progressComponent={<Circular />}
-            customStyles={customStyles}
-            fixedHeader
-            highlightOnHover
-            pointerOnHover            
-            expandableRowsComponent={<SubTable />}
         />);
 }

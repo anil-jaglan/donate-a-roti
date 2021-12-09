@@ -6,6 +6,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 // pages
 import DashBoard from "views/Dashboard/Dashboard.js";
 import ProfilePage from "views/ProfilePage/ProfilePage.js";
+import RequestForFood from "views/RequestForFood/RequestForFood.js";
 import LoginPage from "views/LoginPage/LoginPage.js";
 import SignupPage from "views/SignupPage/SignupPage.js";
 
@@ -87,6 +88,8 @@ class App extends React.Component {
                         <Route exact path="/" component={DashBoard} ></Route>
                         <ProtectedRoute path="/profile" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
                             component={ProfilePage}></ProtectedRoute>
+                        <ProtectedRoute path="/requestsupport" authenticated={this.state.authenticated} currentUser={this.state.currentUser}
+                            component={RequestForFood}></ProtectedRoute>
                         <Route path="/login"
                             render={(props) => <LoginPage authenticated={this.state.authenticated} {...props} />}></Route>
                         <Route path="/signup"

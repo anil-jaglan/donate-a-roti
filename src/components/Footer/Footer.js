@@ -35,7 +35,6 @@ export default function Footer(props) {
               <a
                 href="/about-us"
                 className={classes.block}
-                target="_blank"
               >
                 About us
               </a>
@@ -44,7 +43,6 @@ export default function Footer(props) {
               <a
                 href="/blog"
                 className={classes.block}
-                target="_blank"
               >
                 Blog
               </a>
@@ -53,7 +51,6 @@ export default function Footer(props) {
               <a
                 href="/policy"
                 className={classes.block}
-                target="_blank"
               >
                 Privacy Policy
               </a>
@@ -66,7 +63,6 @@ export default function Footer(props) {
           <a
             href=""
             className={aClasses}
-            target="_blank"
           >
             India
           </a>{" "}

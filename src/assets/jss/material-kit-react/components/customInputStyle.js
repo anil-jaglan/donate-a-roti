@@ -64,6 +64,9 @@ const customInputStyle = {
       color: "#495057"
     }
   },
+  formControlSelect: {
+    marginTop: "0px",
+  },
   input: {
     color: "#495057",
     height: "unset",

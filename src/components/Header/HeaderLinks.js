@@ -28,7 +28,7 @@ export default function HeaderLinks(props) {
         <Button href="/about" className={classes.navLink + " " + classes.navLinkActive} color="transparent" >About</Button>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Button href="/about" className={classes.navLink + " " + classes.navLinkActive} color="transparent" >Request For Food</Button>
+        <Button href="/requestsupport" className={classes.navLink + " " + classes.navLinkActive} color="transparent" >Request For Food</Button>
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button href="/about" className={classes.navLink + " " + classes.navLinkActive} color="transparent" >Contact Us</Button>
@@ -66,7 +66,7 @@ export default function HeaderLinks(props) {
               }}
               dropdownList={[
                 <a href="/profile" className={classes.link}>Profile</a>,
-                <a href="/settings" className={classes.link}>Settings</a>,
+                // <a href="/settings" className={classes.link}>Settings</a>,
                 <a href="#logout" className={classes.link} onClick={props.onLogout} >Logout</a>
               ]}
             />

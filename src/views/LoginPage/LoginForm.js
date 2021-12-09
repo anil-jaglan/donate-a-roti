@@ -65,7 +65,7 @@ class LoginForm extends React.Component {
     render() {
         const { classes } = this.props;
         return (
-            <form className={classes.form} onSubmit={this.handleSubmit}>                
+            <form className={classes.form} onSubmit={this.handleSubmit}>
                 <h4 className={classes.divider}>Login with Email</h4>
                 <CardBody>
                     <CustomInput

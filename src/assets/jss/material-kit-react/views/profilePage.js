@@ -23,11 +23,10 @@ const profilePageStyle = {
     marginTop: "-80px"
   },
   ...imagesStyle,
-  main: {
-    background: "#FFFFFF",
+  main: {    
     position: "relative",
     zIndex: "3",
-    padding: "10px 0px",
+    padding: "30px 0px 10px",
     marginTop: "70px"
   },
   mainRaised: {
